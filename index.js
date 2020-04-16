@@ -1,14 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-function ByFunction(props)
+
+function Timer()
 {
-  return <h1>hello {props.name}</h1>
+  var el = (<div>Clock : {new Date().toLocaleTimeString()}</div>)
+  render(el, document.getElementById('root1'));
 }
 
-var element = <h1>hello name</h1>
+setInterval(Timer , 1000)
 
-render(<ByFunction name="name from function"/>, document.getElementById('root'));
 
-render(ByFunction({name:"jello"}), document.getElementById('root1'));
 
